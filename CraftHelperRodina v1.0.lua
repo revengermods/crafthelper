@@ -18,8 +18,8 @@ local main_window_state = imgui.ImBool(false)
 
 update_state = false
 
-local script_vers = 1
-local script_vers_text = "1.00"
+local script_vers = 2
+local script_vers_text = "1.05"
 
 local update_url = "https://raw.githubusercontent.com/revengermods/crafthelper/main/update.ini" -- тут тоже свою ссылку
 local update_path = getWorkingDirectory() .. "/update.ini" -- и тут свою ссылку
@@ -582,7 +582,14 @@ function imgui.OnDrawFrame()
 		    imgui.BeginTooltip()
 		    imgui.Text(u8'Металл - 2шт\nХлопок - 50шт\nАлюминий - 2шт\nСтоимость - 15000р')
 		    imgui.EndTooltip()
-		end																																																				
+		end	
+	elseif menu == 14 then
+		imgui.Button(u8"Канистра для воды")
+		if imgui.IsItemHovered() then
+		    imgui.BeginTooltip()
+		    imgui.Text(u8'Металл - 2шт\nХлопок - 50шт\nАлюминий - 2шт\nСтоимость - 15000р')
+		    imgui.EndTooltip()
+		end																																																					
 	end			
 	imgui.EndChild()
 	----------------------------------------------------------------
